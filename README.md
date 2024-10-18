@@ -3,7 +3,7 @@
 _Written by Derek V. Mallia and Kai Wilmot.<br>
 Plume rise source code originally developed by Saulo R. Freitas_
 <br><br>
-<img src="assets/plume_rise.png" alt="Alt text" width="400">
+<img src="assets/plume_rise.png" alt="Alt text">
 ## Introduction:
 Welcome! If you are reading this guide, you are likely interested in generating some wildfire plume rises using the 1-D cloud resolving smoke plume model 
 developed in Freitas et al. (2007; 2010). Further details behind the model physics can be found in Freitas et al. (2007; 2010). This code further expands 
