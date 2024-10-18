@@ -163,7 +163,7 @@ def compute_smoke_profile(result,vertical_profile=None):
     #Ensure all values are greater than 0, even if they are very small and negative. 
     detrain[detrain < 0] = 0
 
-    #Normalize the coeffients between 0 and 1.
+    #Normalize the coeffients 
     detrain = detrain/np.sum(detrain)
 
     detrain_profile = pd.DataFrame({'height(mAGL)': height,'detrain(unitless)': detrain})
