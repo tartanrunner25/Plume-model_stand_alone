@@ -1,10 +1,10 @@
-<h2>Stand-Alone Plume Rise User Guide:</h2>
+# Stand-Alone Plume Rise User Guide:
 
 _Written by Derek V. Mallia and Kai Wilmot.<br>
 Plume rise source code originally developed by Saulo R. Freitas_
 <br><br>
-
-**Introduction:**<br>
+<img src="assets/plume_rise.png" alt="Alt text" width="400">
+## Introduction:
 Welcome! If you are reading this guide, you are likely interested in generating some wildfire plume rises using the 1-D cloud resolving smoke plume model 
 developed in Freitas et al. (2007; 2010). Further details behind the model physics can be found in Freitas et al. (2007; 2010). This code further expands 
 upon the original Freitas model by including updates from Mallia et al. (2018) and Wilmot et al. (2022). This model computes the height of the wildfire
@@ -13,7 +13,7 @@ model outputs a plume steady-state thermodynamic profile, along with the detrain
 profile provided by the user.
 <br><br>
 
-**Installation instructions:**<br>
+## Installation instructions:
 Before installing this code, users should should ensure that they have a local installation of fortran, e.g., `which gfortran`, along with python version >3.6. 
 For your python installation, users are recommended to have commonly used modules such as numpy and pandas. If the user plans on using meteorological data from
 a host weather prediction model or reanalysis, users might also want to install a library that can read grib and/or netcdf files. No additional library or 
@@ -50,7 +50,7 @@ data located in `./model_input/sounding_OTX_08-09-2019_0z.txt`. Output from this
 when trying to run their own wildfire plume rises. Model parameters, including model input and output paths are set at the top of the script:<br>
 
 
-# Plume rise simulation run-time parameters:
+## Plume rise simulation run-time parameters:
 
 The following parameters should be set by the user for the Freitas model:
 
@@ -94,16 +94,19 @@ Another script called `run_multi_plume_rise.py` has also been provided as a refe
 can be modified to run multiple plume rise simulations at once.
 <br><br>
 
-# Plume rise outputs
+## Plume rise outputs
 Output from the plume rise simulations will be stored in the output directory path, within a subdirectory that uses the named assigned to 
 `plume_ID`. Output files include `plume_log`, `plume_namelist`, `env_met_input.dat`, `final_plume.dat`, and `detrain_profile.dat`. The plume log 
 files contains print statements from the Freitas plume rise model code, and will indicate whether there were any runtime errors. `plume_namelist`
 and `env_met_input.dat` are the inputs used for the plume rise model. `final_plume.dat` contains the raw model output from the Freitas model
 at vertical levels starting from the surface to 20-km. The contains environmental meteorological conditions, along with the thermodynamic and 
 momentum profile of the plume rise. `detrain_profile.dat` is the normalized detrainment profile of the wildfire plume rise. 
+<br><br>
 
+## Acknowledegments 
+This work was supported by funding by NASA's FireSense program "NNH22ZDA001N-FIRET" and by the Naval Research Laboratory (BAA N0017323SBA01).
+<br><br>
+If you use this code in your research or projects, please cite the repository as follows:<br>
 
-# Acknowledegments 
-This work was supported by funded by NASA's FireSense program "NNH22ZDA001N-FIRET" and by the Naval Research Laboratory (BAA N0017323SBA01).
-
+Mallia, D. V. and K. Wilmot: Plume-model_stand_alone. GitHub Repository, https://github.com/tartanrunner25/Plume-model_stand_alone. Accessed [Date].
 
