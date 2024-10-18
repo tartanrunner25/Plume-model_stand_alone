@@ -1,4 +1,4 @@
-# Stand-alone plume rise model user guide:
+# Plume rise model user guide:
 
 _Written by Derek V. Mallia and Kai Wilmot.<br>
 Plume rise source code originally developed by Saulo R. Freitas_
