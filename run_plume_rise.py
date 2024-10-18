@@ -12,7 +12,7 @@ import plume_rise_functions as prf
 #plume rise model. Written by DVM 10/09/2024
 
 #Freitas model input parameters that should be set by the user
-plume_ID = 'williams_flat_08092019-00z'            #Name of simulation, which is used to name model output. Should a string.
+plume_ID = 'williams_flat_08092019-00z'         #Name of simulation, which is used to name model output. Should a string.
 heat_flux = 2.56                                #Fire heat flux in kW/m2
 burn_area = 7500000                             #Burn area in m2
 wind_flag = 1                                   #Flag determining if we want to turn on wind shear effects on the 
@@ -22,10 +22,10 @@ fuel_moist = 10                                 #Leave as is, not current used i
                                                 #its current formulation
 vertical_profile = np.arange(50,20000,100)      #Define heights for detrainment profile. Can be set to None if the
                                                 #user wants to stick with the default height profile
-output_directory = './output'                   #Path where output files will be placed.
+output_directory = './model_output'             #Path where output files will be placed.
 write_plume_evo = False                         #Do we want to write out the evolution of the plume rise by timestep?
                                                 #(True/False). If not, discard the results. File can be larger.
-create_image = True                            #Do we want to create a plot?
+create_image = True                             #Do we want to create a plot?
 
 #Merge namelist options together into a list of values
 plume_namelist = [heat_flux,burn_area,wind_flag,entrain,fuel_moist]
