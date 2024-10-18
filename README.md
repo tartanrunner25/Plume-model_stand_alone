@@ -1,6 +1,7 @@
-<h2>Stand-alone Freitas Model User Guide:</h2>
+<h2>Stand-Alone Plume Rise User Guide:</h2>
 
-_Written by Derek V. Mallia and contributions from Kai Wilmot. Plume rise source code originally developed by Saulo R. Freitas_
+_Written by Derek V. Mallia and Kai Wilmot.<br>
+Plume rise source code originally developed by Saulo R. Freitas_
 <br><br>
 
 **Introduction:**<br>
@@ -43,11 +44,13 @@ Once the code Makefile fortran compiler has been set, clean the existing install
 `make`. If the code successfully compiles, you should see a new executable called `plume_alone_module`. You should now be ready to run the Freitas model code!
 <br><br>
 
-**Running the model**<br>
-To run the Freitas model, simply enter python `run_plume_rise.py`. This will use the default model parameters set in the run_plume_rise.py script, and meteorological
+**Running the plume rise model:**<br>
+To run the Freitas model, simply enter `python run_plume_rise.py`. This will use the default model parameters set in the run_plume_rise.py script, and meteorological
 data located in `./model_input/sounding_OTX_08-09-2019_0z.txt`. Output from this simulation will be stored in `./model_output`. Users should edit `run_plume_rise.py`
 when trying to run their own wildfire plume rises. Model parameters, including model input and output paths are set at the top of the script:<br>
-# Freitas Model Input Parameters
+
+
+# Plume rise simulation run-time parameters:
 
 The following parameters should be set by the user for the Freitas model:
 
@@ -74,7 +77,33 @@ plume_namelist = [heat_flux, burn_area, wind_flag, entrain, fuel_moist]
 thermo_file = './model_input/sounding_OTX_08-09-2019_0z.txt'
 ```
 
+The meteorological input data assigned `thermo_profile` can be derived from any source, e.g., Radiosondes, GFS, ERA5, HRRR, ect.... However,
+this data must be provided up to 20-kmAGL, and include variables for height (mAGL), pressure (hPa), temperature (C), relative humidity (%),
+dewpoint (C), wind directory (degrees), wind speed (m/s), potential temperature (K) and mixing ratio (g/kg). The varaibles must be inputed 
+as a pandas data frame, and _must_ be in the order listed above. It is up to the user to properly format their meteorological data following
+the example provided in the run_plume_rise.py script.<br><br>
+
+Users also have the option of prescibing their own vertical profile levels for normalized detrainment coeffients. Total smoke emissions for 
+a given wildfire can then be multiple by these detrainment coeffients to estimate how much smoke is emitted at a given vertical level. For 
+example:
+```python
+smoke_profile = detrain_profile * total_smoke_emissions
+```
+<br><br>
+Another script called `run_multi_plume_rise.py` has also been provided as a reference, and shows users how the `run_plume_rise.py` script 
+can be modified to run multiple plume rise simulations at once.
+<br><br>
+
+# Plume rise outputs
+Output from the plume rise simulations will be stored in the output directory path, within a subdirectory that uses the named assigned to 
+`plume_ID`. Output files include `plume_log`, `plume_namelist`, `env_met_input.dat`, `final_plume.dat`, and `detrain_profile.dat`. The plume log 
+files contains print statements from the Freitas plume rise model code, and will indicate whether there were any runtime errors. `plume_namelist`
+and `env_met_input.dat` are the inputs used for the plume rise model. `final_plume.dat` contains the raw model output from the Freitas model
+at vertical levels starting from the surface to 20-km. The contains environmental meteorological conditions, along with the thermodynamic and 
+momentum profile of the plume rise. `detrain_profile.dat` is the normalized detrainment profile of the wildfire plume rise. 
 
 
+# Acknowledegments 
+This work was supported by funded by NASA's FireSense program "NNH22ZDA001N-FIRET" and by the Naval Research Laboratory (BAA N0017323SBA01).
 
 
