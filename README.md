@@ -1,4 +1,4 @@
-# Stand-Alone Plume Rise User Guide:
+# Stand-alone plume rise model user guide:
 
 _Written by Derek V. Mallia and Kai Wilmot.<br>
 Plume rise source code originally developed by Saulo R. Freitas_
@@ -110,3 +110,19 @@ If you use this code in your research or projects, please cite the repository as
 
 Mallia, D. V. and K. Wilmot: Plume-model_stand_alone. GitHub Repository, https://github.com/tartanrunner25/Plume-model_stand_alone. Accessed [Date].
 
+
+## References
+Freitas, S. R., Longo, K. M., Chatfield, R., Latham, D., Silva Dias, M. A. F., Andreae, 
+M. O., Prins, E., Santos, J. C., Gielow, R., and Carvalho Jr., J. A.: Including the 
+sub-grid scale plume rise of vegetation fires in low resolution atmospheric transport 
+models, Atmos. Chem. Phys., 7, 3385–3398, https://doi.org/10.5194/acp-7-3385-2007, 2007.
+
+Freitas, S. R., Longo, K. M., Trentmann, J., and Latham, D.: Technical Note: Sensitivity 
+of 1-D smoke plume rise models to the inclusion of environmental wind drag, Atmos. 
+Chem. Phys., 10, 585–594, https://doi.org/10.5194/acp-10-585-2010, 2010.
+
+Mallia, D. V., Kochanski A., Urbanski S. P., and Lin J. C.: Optimizing smoke and plume rise 
+modeling approaches at local scales. Atmosphere, 9, 116, 2018.
+
+Wilmot, K., Mallia, D. V., Haller, A. G. and Lin, J. C. : Wildfire plumes in the Western US 
+are reaching greater heights and injecting more aerosols aloft under a changing climate. Scientific Reports, 12, 12400, 2022.
