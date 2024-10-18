@@ -109,7 +109,7 @@ This work was supported by funding by NASA's FireSense program "NNH22ZDA001N-FIR
 If you use this code in your research or projects, please cite the repository as follows:<br>
 
 Mallia, D. V. and K. Wilmot: Plume-model_stand_alone. GitHub Repository, https://github.com/tartanrunner25/Plume-model_stand_alone. Accessed [Date].
-
+<br><br>
 
 ## References
 Freitas, S. R., Longo, K. M., Chatfield, R., Latham, D., Silva Dias, M. A. F., Andreae, 
