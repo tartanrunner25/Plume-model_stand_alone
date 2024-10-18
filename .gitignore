@@ -1,0 +1,10 @@
+.DS_Store
+._*
+
+# Swap and temporary files
+*.swp
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# Ignore other temp or hidden files
